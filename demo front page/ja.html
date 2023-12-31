@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<h1 id="main"> Hello Everyone</h1>
+
+		<button class="button">Click 1</button>
+		<button class="button">Click 2</button>
+		<button class="button">Click 3</button>
+		<button class="button">Click 4</button>
+		<button class="button">Click 5</button>
+		<button class="button">Click 6</button>
+		<button class="button">Click 7</button>
+		<button class="button"onclick="document.getElementById('main').innerHTML = 'Thanks'">Click 8</button>
+		<button class="nav-button">Submit</button>
+		<script>
+			// let init = 1;
+			
+			// document.getElementById('button').addEventListener('click', function() {
+			// if (init === 1){
+			// 	document.getElementById('main').innerHTML = "on click change";
+			// }
+			// else if( init === 2){
+			// document.getElementById('div').classList.add('TestClass')
+			// 	}
+			// init =init + 1;
+			// console.log(init);
+			// });
+			let all = document.querySelectorAll('.button')
+			all.forEach(function(button,index) {
+			if (index <=3) {
+				button.addEventListener('click',function(target){
+					console.log(target);
+				})
+				}
+				if (index >=4){
+					button.addEventListener('click', function(target){
+						alert(target);
+					})
+				}
+			// else {
+			// 		button.addEventListener('click', function(target){
+			// 			console.log(target);
+			// 		})
+			// 	}
+				
+			})
+			let nav = document.querySelector('.nav-button')
+			nav.addEventListener('click', function (target){
+				console.log(target);
+			})
+		</script>
+	</body>
+</html>
